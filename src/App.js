@@ -1,6 +1,7 @@
 // import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home/Home";
+import RecipeList from "./pages/RecipeList/RecipeList";
 
 function App() {
   return (
@@ -11,9 +12,9 @@ function App() {
           <Route exact path={"/"}>
             <Home />
           </Route>
-          {/* <Route exact path="/search">
-            <Search />
-          </Route> */}
+          <Route exact path="/recipelist">
+            <RecipeList />
+          </Route>
         </Switch>
       </Router>
     </div>
