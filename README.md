@@ -18,7 +18,7 @@
 
 ## **Installation**
 
-> Enter npm install in commanf line
+> Enter npm install in command line
 
 ## **Usage**
 
