@@ -6,6 +6,8 @@
 
 > This app is a cook book of sorts. Meant to hold all your favorite recipes from grandma
 
+> Link to back End application: https://github.com/PatCeriale/Repertoire-Back-End
+
 ## **Table of Contents**
 
 1. [Installation](#installation)
