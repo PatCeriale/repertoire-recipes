@@ -1,0 +1,36 @@
+#logo {
+  color: green;
+  text-shadow: 1px 1px 2px black, 0 0 25px goldenrod, 0 0 5px gold, -1px 0 black,
+    0 1px black, 1px 0 black, 0 -1px black;
+  font-family: "Luckiest Guy", cursive;
+  /* background-color: rgb(14, 14, 14);
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgoldenrod;
+    box-shadow: 3px 3px 8px 3px goldenrod; */
+
+  border-radius: 30px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.NavBar {
+  color: green;
+  text-shadow: 1px 1px 2px black, 0 0 5px goldenrod, 0 0 5px gold, -1px 0 black,
+    0 1px black, 1px 0 black, 0 -1px black;
+  font-family: "Luckiest Guy", cursive;
+  background-color: grey;
+  min-height: 10%;
+  text-align: right;
+}
+.links {
+  right: 0%;
+}
+.custom-toggler .navbar-toggler {
+  border-color: rgb(255, 102, 203);
+}
+.nav-item {
+  margin-left: 10px;
+  font-size: larger;
+}
