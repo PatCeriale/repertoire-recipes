@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home/Home";
 import RecipeList from "./pages/RecipeList/RecipeList";
+import Recipe from "./pages/Recipe/Recipe";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           </Route>
           <Route exact path="/recipelist">
             <RecipeList />
+          </Route>
+          <Route exact path="/recipe">
+            <Recipe />
           </Route>
         </Switch>
       </Router>
