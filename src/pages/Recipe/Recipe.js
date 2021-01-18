@@ -4,7 +4,7 @@ import RecipeCard from "../../components/RecipeCard/RecipeCard";
 export default function RecipeList() {
   return (
     <div className="Home">
-      <h1>Recipe Name!</h1>
+      <h1>(Recipe Title)</h1>
       <div className="RecipeCard">
         <div className="card" style={{ width: "90vw" }}>
           <img
@@ -13,16 +13,24 @@ export default function RecipeList() {
             alt="..."
           />
           <div className="card-body">
-            <h5 className="card-title">Cook Time: (cooktime)</h5>
+            <p className="card-text">(description)</p>
+            <h5 className="card-title">
+              Prep Time: (prep-time) Cook Time: (cook-time)
+            </h5>
+            <h5 className="card-title"></h5>
             <h5 className="card-title">Ingredients</h5>
+            <ul className="card-text">
+              <li>map over ingredients array</li>
+              <li>map over ingredients array</li>
+            </ul>
             <h5 className="card-title">Preparation</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" className="btn btn-primary">
+            <ol className="card-text">
+              <li>map over preparation array</li>
+              <li>map over preparation array</li>
+            </ol>
+            {/* <a href="#" className="btn btn-primary">
               Go somewhere
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
