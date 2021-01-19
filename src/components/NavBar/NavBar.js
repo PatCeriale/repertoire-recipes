@@ -5,9 +5,12 @@ import "./NavBar.css";
 export default function NavBar() {
   return (
     <div className="NavBar">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-light navbar-custom">
         <Link to="/" className="navbar-brand mx-5" id="logo">
-          <h3>Repertoire Recipes</h3>{" "}
+          <img
+            src="./images/chefpopples.png"
+            style={{ width: "200px", justifyContent: "center" }}
+          />
         </Link>
         <button
           className="navbar-toggler"

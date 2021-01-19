@@ -24,6 +24,13 @@
   min-height: 10%;
   text-align: right;
 }
+.navbar-custom {
+  /* background-color: rgb(235, 8, 140); */
+  background-image: url(https://www.publicdomainpictures.net/pictures/270000/nahled/floral-pattern-background-1726.jpg);
+}
+.navbar-toggler {
+  color: green;
+}
 .links {
   right: 0%;
 }
