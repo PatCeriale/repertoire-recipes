@@ -4,4 +4,8 @@ body {
 .Home .card {
   margin: auto;
   margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+.carousel-img {
+  height: 150 px;
 }

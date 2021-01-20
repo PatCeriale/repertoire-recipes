@@ -1,8 +1,8 @@
 #logo {
-  color: green;
+  /* color: green;
   text-shadow: 1px 1px 2px black, 0 0 25px goldenrod, 0 0 5px gold, -1px 0 black,
     0 1px black, 1px 0 black, 0 -1px black;
-  font-family: "Courgette", cursive;
+  font-family: "Courgette", cursive; */
   /* background-color: rgb(14, 14, 14);
     padding: 5px;
     border-style: solid;
@@ -26,7 +26,9 @@
 }
 .navbar-custom {
   /* background-color: rgb(235, 8, 140); */
-  background-image: url(https://www.publicdomainpictures.net/pictures/270000/nahled/floral-pattern-background-1726.jpg);
+  background-image: radial-gradient(yellow, red);
+  /* background-image: url(./floralPattern.png); */
+  color: white;
 }
 .navbar-toggler {
   color: green;

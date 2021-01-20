@@ -8,7 +8,7 @@ export default function NavBar() {
       <nav className="navbar navbar-expand-lg navbar-light navbar-custom">
         <Link to="/" className="navbar-brand mx-5" id="logo">
           <img
-            src="./images/chefpopples.png"
+            src="./images/repertoirelogo.png"
             style={{ width: "200px", justifyContent: "center" }}
           />
         </Link>

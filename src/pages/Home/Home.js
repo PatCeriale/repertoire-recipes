@@ -23,8 +23,8 @@ export default function Home() {
         <Carousel activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=First slide&bg=373940"
+              className="d-block w-100 carousel-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjM6V082IrBfePHP-PXYRDlOPsMXS3qeo3_w&usqp=CAU"
               alt="First slide"
             />
             <Carousel.Caption>
@@ -34,8 +34,8 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Second slide&bg=282c34"
+              className="d-block w-100 carousel-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjM6V082IrBfePHP-PXYRDlOPsMXS3qeo3_w&usqp=CAU"
               alt="Second slide"
             />
 
@@ -46,8 +46,8 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Third slide&bg=20232a"
+              className="d-block w-100 carousel-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjM6V082IrBfePHP-PXYRDlOPsMXS3qeo3_w&usqp=CAU"
               alt="Third slide"
             />
 
@@ -59,6 +59,7 @@ export default function Home() {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+        <br />
         <h5>Search recipes by:</h5>
         <ul>
           <li>
