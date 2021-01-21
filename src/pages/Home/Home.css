@@ -10,3 +10,8 @@ body {
 .carousel-img {
   height: 150 px;
 }
+.chef-poppy {
+  /* margin: "auto"; */
+  text-align: center;
+  color: white;
+}
