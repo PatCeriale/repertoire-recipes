@@ -76,7 +76,9 @@ export default function Home() {
       </div>
       <div className="chef-poppy">
         <img src="./images/chefpopples.png" style={{ width: "50vw" }} />
-        <h5>This website is Chef Poppy approved</h5>
+        <h5>
+          <i>Repertoire Recipes</i> is Chef Poppy approved
+        </h5>
       </div>
     </div>
   );
