@@ -40,6 +40,10 @@ export default function NavBar() {
               {" "}
               <Link to="/ingredient">Ingredient</Link>
             </li>
+            <li className="nav-item">
+              {" "}
+              <Link to="/newrecipe">New Recipe</Link>
+            </li>
           </ul>
         </div>
       </nav>
