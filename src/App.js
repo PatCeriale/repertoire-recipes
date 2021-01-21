@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home/Home";
 import RecipeList from "./pages/RecipeList/RecipeList";
 import Recipe from "./pages/Recipe/Recipe";
+import NewRecipe from "./pages/NewRecipe/NewRecipe";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path="/recipe">
             <Recipe />
+          </Route>
+          <Route exact path="/newrecipe">
+            <NewRecipe />
           </Route>
         </Switch>
       </Router>
