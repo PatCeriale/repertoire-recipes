@@ -66,7 +66,9 @@ export default function NewRecipe() {
               {/* We'll never share your text with anyone else. */}
             </Form.Text>
           </Form.Group>
-
+          <Button variant="primary" type="submit">
+            Add Ingredient
+          </Button>
           <Form.Group controlId="formBasicTitle">
             <Form.Label>Preparation</Form.Label>
             <Form.Control
@@ -77,7 +79,9 @@ export default function NewRecipe() {
               {/* We'll never share your text with anyone else. */}
             </Form.Text>
           </Form.Group>
-
+          <Button variant="primary" type="submit">
+            Add another step
+          </Button>
           <Form.Group>
             <Form.File id="exampleFormControlFile1" label="Add recipe image" />
           </Form.Group>
