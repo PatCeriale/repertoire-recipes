@@ -20,7 +20,7 @@ export default function NewRecipe() {
             <Form.Control as="textarea" rows={3} />
           </Form.Group>
 
-          <Form.Group controlId="formBasicTitle">
+          <Form.Group controlId="formBasicTime">
             <Form.Row>
               <Col>
                 {" "}
@@ -54,6 +54,28 @@ export default function NewRecipe() {
               <option value="9">9</option>
               <option value="10">10</option>
             </Form.Control>
+          </Form.Group>
+
+          <Form.Group controlId="formBasicTitle">
+            <Form.Label>Ingredients</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter ingredient and amount"
+            />
+            <Form.Text className="text-muted">
+              {/* We'll never share your text with anyone else. */}
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group controlId="formBasicTitle">
+            <Form.Label>Preparation</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter step by step preparation"
+            />
+            <Form.Text className="text-muted">
+              {/* We'll never share your text with anyone else. */}
+            </Form.Text>
           </Form.Group>
 
           <Form.Group>
