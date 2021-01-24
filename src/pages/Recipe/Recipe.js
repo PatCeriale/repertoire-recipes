@@ -1,5 +1,5 @@
 import "./Recipe.css";
-import RecipeCard from "../../components/RecipeCard/RecipeCard";
+// import RecipeCard from "../../components/RecipeCard/RecipeCard";
 
 export default function RecipeList() {
   return (

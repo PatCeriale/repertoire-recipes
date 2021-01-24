@@ -9,6 +9,7 @@ export default function NavBar() {
         <Link to="/" className="navbar-brand mx-5" id="logo">
           <img
             src="./images/repertoirelogo.png"
+            alt="Chef Poppy logo"
             style={{ width: "200px", justifyContent: "center" }}
           />
         </Link>

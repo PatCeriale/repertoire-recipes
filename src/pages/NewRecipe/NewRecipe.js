@@ -1,13 +1,51 @@
 import { Form, Button, Col } from "react-bootstrap";
+import React, { useState } from "react";
 import "./NewRecipe.css";
 
 export default function NewRecipe() {
+  const [mystate, setMyState] = useState({
+    title: "",
+    description: "",
+    image: "",
+    preptime: Number,
+    cookime: Number,
+    servingsize: Number,
+    ingredients: [{ type: "" }],
+    instructions: [{ type: "" }],
+    tags: "",
+  });
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+
+    setMyState({
+      ...mystate,
+
+      [name]: value,
+    });
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log(mystate);
+
+    // createNewUser(mystate)
+    //   .then((res) => {
+    //     console.log(res);
+    //     localStorage.setItem("token", res.data.token);
+    //     history.push("/signin");
+    //   })
+    //   // add an alert to let user know their signup didn't work
+    //   .catch((error) => {
+    //     alert("user registration failed, try again", error);
+    //     // console.log("user registration failed:", error);
+    //   });
+  };
   return (
     <div className="NewRecipe">
       <div className="card" style={{ width: "90vw" }}>
         <h1>Add a recipe</h1>
         <hr />
-        <Form>
+        <Form onChange={handleInputChange}>
           <Form.Group controlId="formBasicTitle">
             <Form.Label>Recipe Title</Form.Label>
             <Form.Control type="text" placeholder="Enter title" />
@@ -62,9 +100,6 @@ export default function NewRecipe() {
               type="text"
               placeholder="Enter ingredient and amount"
             />
-            <Form.Text className="text-muted">
-              {/* We'll never share your text with anyone else. */}
-            </Form.Text>
           </Form.Group>
           <Button variant="primary" type="submit">
             Add Ingredient
@@ -75,9 +110,6 @@ export default function NewRecipe() {
               type="text"
               placeholder="Enter step by step preparation"
             />
-            <Form.Text className="text-muted">
-              {/* We'll never share your text with anyone else. */}
-            </Form.Text>
           </Form.Group>
           <Button variant="primary" type="submit">
             Add another step
@@ -85,7 +117,7 @@ export default function NewRecipe() {
           <Form.Group>
             <Form.File id="exampleFormControlFile1" label="Add recipe image" />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" onSubmit={handleFormSubmit}>
             Submit
           </Button>
         </Form>
