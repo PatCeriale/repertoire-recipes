@@ -7,9 +7,9 @@ export default function NewRecipe() {
     title: "",
     description: "",
     image: "",
-    preptime: Number,
-    cookime: Number,
-    servingsize: Number,
+    preptime: "",
+    cooktime: "",
+    servingsize: "",
     ingredients: [{ type: "" }],
     instructions: [{ type: "" }],
     tags: "",
@@ -45,41 +45,37 @@ export default function NewRecipe() {
       <div className="card" style={{ width: "90vw" }}>
         <h1>Add a recipe</h1>
         <hr />
-        <Form onChange={handleInputChange}>
-          <Form.Group controlId="formBasicTitle">
+        <Form onSubmit={handleFormSubmit}>
+          <Form.Group controlId="title" onChange={handleInputChange}>
             <Form.Label>Recipe Title</Form.Label>
-            <Form.Control type="text" placeholder="Enter title" />
-            <Form.Text className="text-muted">
-              {/* We'll never share your text with anyone else. */}
-            </Form.Text>
+            <Form.Control type="title" placeholder="Enter title" />
           </Form.Group>
-          <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Group controlId="description" onChange={handleInputChange}>
             <Form.Label>Description</Form.Label>
             <Form.Control as="textarea" rows={3} />
           </Form.Group>
 
-          <Form.Group controlId="formBasicTime">
-            <Form.Row>
-              <Col>
-                {" "}
+          <Form.Row>
+            <Col>
+              <Form.Group controlId="preptime" onChange={handleInputChange}>
                 <Form.Label>Prep time</Form.Label>
                 <Form.Control type="text" placeholder="in minutes" />
-                <Form.Text className="text-muted"></Form.Text>
-              </Col>
-              <Col>
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group controlId="cooktime" onChange={handleInputChange}>
                 <Form.Label>Cook time</Form.Label>
                 <Form.Control type="text" placeholder="in minutes" />
-                <Form.Text className="text-muted"></Form.Text>{" "}
-              </Col>
-            </Form.Row>
-          </Form.Group>
-          <Form.Group>
+              </Form.Group>
+            </Col>
+          </Form.Row>
+          <Form.Group controlId="servingsize" onChange={handleInputChange}>
             <Form.Label>Serving Size</Form.Label>
             <Form.Control
               as="select"
-              className="mr-sm-2"
-              id="inlineFormCustomSelect"
-              custom
+              //   className="mr-sm-2"
+              //   id="inlineFormCustomSelect"
+              //   custom
             >
               <option value="0">0</option>
               <option value="1">1</option>
@@ -117,7 +113,7 @@ export default function NewRecipe() {
           <Form.Group>
             <Form.File id="exampleFormControlFile1" label="Add recipe image" />
           </Form.Group>
-          <Button variant="primary" type="submit" onSubmit={handleFormSubmit}>
+          <Button variant="primary" type="submit" onClick={handleFormSubmit}>
             Submit
           </Button>
         </Form>
