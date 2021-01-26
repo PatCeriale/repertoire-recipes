@@ -98,7 +98,7 @@ export default function NewRecipe() {
             />
           </Form.Group>
           <Button variant="primary" type="submit">
-            <i class="fas fa-plus-circle"></i> Add Ingredient
+            <i className="fas fa-plus-circle"></i> Add Ingredient
           </Button>
           <Form.Group controlId="formBasicTitle">
             <Form.Label>Preparation</Form.Label>
@@ -108,7 +108,7 @@ export default function NewRecipe() {
             />
           </Form.Group>
           <Button variant="primary" type="submit">
-            <i class="fas fa-plus-circle"></i> Add another step
+            <i className="fas fa-plus-circle"></i> Add another step
           </Button>
           <Form.Group>
             <Form.File id="exampleFormControlFile1" label="Add recipe image" />
