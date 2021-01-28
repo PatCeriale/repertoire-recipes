@@ -37,13 +37,13 @@ export default function RecipeList() {
         </h1>
         <ul>
           <li>
-            <Link to="/recipe?:id">Recipe 1</Link>
+            <Link to="/recipe?">Recipe 1</Link>
           </li>
           <li>
-            <Link>Recipe 2</Link>
+            <Link to="/recipe?">Recipe 2</Link>
           </li>
           <li>
-            <Link>Recipe 2</Link>
+            <Link to="/recipe?">Recipe 2</Link>
           </li>
         </ul>
       </div>

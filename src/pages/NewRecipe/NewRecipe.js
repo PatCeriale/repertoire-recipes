@@ -12,6 +12,7 @@ export default function NewRecipe() {
     servingsize: "",
     ingredients: [{ type: "" }],
     instructions: [{ type: "" }],
+    course: "",
     tags: "",
   });
   const handleInputChange = (event) => {
