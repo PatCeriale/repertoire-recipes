@@ -31,7 +31,7 @@ export default function NavBar() {
             </li>
             <li className="nav-item">
               {" "}
-              <Link to="/allrecipes"> All Recipes</Link>{" "}
+              <Link to="/recipelist"> All Recipes</Link>{" "}
             </li>
             <li className="nav-item">
               {" "}
