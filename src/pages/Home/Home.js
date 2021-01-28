@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="Home">
       <div className="card" style={{ width: "90vw" }}>
-        <h3>Welcome to Repertoire Recipes!</h3>
+        <h3 id="fancyText">Welcome to Repertoire Recipes!</h3>
         <hr />
         <p>
           Have you recently found a new tasty recipe and want to save it for

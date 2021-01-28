@@ -43,7 +43,7 @@ export default function NewRecipe() {
   return (
     <div className="NewRecipe">
       <div className="card" style={{ width: "90vw" }}>
-        <h1>Add a recipe</h1>
+        <h1 id="fancyText">Add a recipe</h1>
         <hr />
         <Form onSubmit={handleFormSubmit}>
           <Form.Group controlId="title" onChange={handleInputChange}>

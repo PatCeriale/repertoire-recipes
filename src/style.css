@@ -3,3 +3,7 @@ body {
   background-size: cover;
   opacity: 1;
 }
+#fancyText {
+  font-family: "Courgette", cursive;
+  text-align: center;
+}

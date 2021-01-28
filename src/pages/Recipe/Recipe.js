@@ -4,8 +4,8 @@ import "./Recipe.css";
 export default function RecipeList() {
   return (
     <div className="Recipe">
-      <h1>(Recipe Title)</h1>
       <div className="card RecipeCard" style={{ width: "90vw" }}>
+        <h1 id="fancyText">(Recipe Title)</h1>
         <img
           src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/garlic-spaghetti-horizontal-1539203011.jpg?crop=1.00xw:0.752xh;0,0.108xh&resize=1200:*"
           className="card-img-top"
