@@ -33,14 +33,14 @@ export default function NavBar() {
               {" "}
               <Link to="/recipelist"> All Recipes</Link>{" "}
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               {" "}
               <Link to="/style">Style</Link>
             </li>
             <li className="nav-item">
               {" "}
               <Link to="/ingredient">Ingredient</Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               {" "}
               <Link to="/newrecipe">New Recipe</Link>
