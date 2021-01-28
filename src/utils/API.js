@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseURL =
-  "https://repertoire-recipes-back-end.herokuapp.com/" ||
+  "https://repertoire-sql-backend.herokuapp.com/" ||
   process.env.REACT_APP_API_URL ||
   "http://localhost:5000";
 
