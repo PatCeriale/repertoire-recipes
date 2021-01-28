@@ -60,13 +60,13 @@ export default function NewRecipe() {
             <Col>
               <Form.Group controlId="preptime" onChange={handleInputChange}>
                 <Form.Label>Prep time</Form.Label>
-                <Form.Control type="text" placeholder="in minutes" />
+                <Form.Control type="preptime" placeholder="in minutes" />
               </Form.Group>
             </Col>
             <Col>
               <Form.Group controlId="cooktime" onChange={handleInputChange}>
                 <Form.Label>Cook time</Form.Label>
-                <Form.Control type="text" placeholder="in minutes" />
+                <Form.Control type="cooktime" placeholder="in minutes" />
               </Form.Group>
             </Col>
           </Form.Row>
