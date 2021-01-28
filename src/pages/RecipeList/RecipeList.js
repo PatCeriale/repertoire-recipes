@@ -1,4 +1,6 @@
-import { Form, Button, Col, Row } from "react-bootstrap";
+import { Form, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 import "./RecipeList.css";
 
 export default function RecipeList() {
@@ -33,6 +35,17 @@ export default function RecipeList() {
         <h1 id="fancyText" style={{ textAlign: "left" }}>
           A <hr />
         </h1>
+        <ul>
+          <li>
+            <Link to="/recipe?:id">Recipe 1</Link>
+          </li>
+          <li>
+            <Link>Recipe 2</Link>
+          </li>
+          <li>
+            <Link>Recipe 2</Link>
+          </li>
+        </ul>
       </div>
     </div>
   );
