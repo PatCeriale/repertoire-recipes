@@ -7,3 +7,21 @@
 .Recipe h1 {
   text-align: center;
 }
+.Recipe button {
+  width: 33%;
+}
+#leftBtn {
+  margin: 5px;
+  background-color: rgb(25, 206, 25);
+  border-radius: 7px;
+}
+#rightBtn {
+  margin: 5px;
+  /* justify-content: right; */
+  background-color: rgb(233, 4, 4);
+  color: white;
+  border-radius: 7px;
+}
+#buttonBox {
+  text-align: center;
+}

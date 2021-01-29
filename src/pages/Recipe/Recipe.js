@@ -1,6 +1,10 @@
 import "./Recipe.css";
 // import RecipeCard from "../../components/RecipeCard/RecipeCard";
 
+// onClick function for updating recipe
+
+// onClick function for deleting recipe, add alert asking if the person is sure or ask for password
+
 export default function RecipeList() {
   return (
     <div className="Recipe">
@@ -27,6 +31,15 @@ export default function RecipeList() {
             <li>map over preparation array</li>
             <li>map over preparation array</li>
           </ol>
+        </div>
+        <hr />
+        <div id="buttonBox">
+          <button id="leftBtn">
+            <i class="fas fa-wrench"></i> Update
+          </button>
+          <button id="rightBtn">
+            <i class="far fa-trash-alt"></i> Delete
+          </button>
         </div>
       </div>
     </div>
