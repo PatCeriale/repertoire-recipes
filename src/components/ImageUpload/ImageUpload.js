@@ -13,6 +13,7 @@ class ImageUpload extends React.Component {
       (error, result) => {
         if (!error && result && result.event === "success") {
           console.log(result.info.url);
+          // Return url to server when it is running correctly
         }
       }
     );
