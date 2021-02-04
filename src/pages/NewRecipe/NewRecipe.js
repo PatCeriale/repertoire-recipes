@@ -78,7 +78,8 @@ export default function NewRecipe() {
             <Form.Label>Description</Form.Label>
             <Form.Control as="textarea" rows={3} />
           </Form.Group>
-
+          <ImageUpload />
+          <br />
           <Form.Row>
             <Col>
               <Form.Group controlId="preptime" onChange={handleInputChange}>
@@ -134,11 +135,12 @@ export default function NewRecipe() {
           <Button variant="primary" type="submit">
             <i className="fas fa-plus-circle"></i> Add another step
           </Button>
-          <Form.Group>
+          {/* <Form.Group>
             <Form.File id="exampleFormControlFile1" label="Add recipe image" />
-          </Form.Group>
-          <ImageUpload />
-          <Button variant="primary" type="submit" onClick={handleFormSubmit}>
+          </Form.Group> */}
+          <br />
+          <br />
+          <Button variant="success" type="submit" onClick={handleFormSubmit}>
             Submit
           </Button>
         </Form>

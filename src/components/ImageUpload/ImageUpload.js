@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "react-bootstrap";
+
 class ImageUpload extends React.Component {
   constructor(props) {
     super(props);
@@ -7,8 +9,8 @@ class ImageUpload extends React.Component {
   showWidget = () => {
     let widget = window.cloudinary.createUploadWidget(
       {
-        cloudName: `your cloudName`,
-        uploadPreset: `your uploadPreset`,
+        cloudName: process.env.REACT_APP_CLOUDINARY_NAME,
+        uploadPreset: process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET,
       },
       (error, result) => {
         if (!error && result && result.event === "success") {
@@ -21,8 +23,10 @@ class ImageUpload extends React.Component {
   };
   render() {
     return (
-      <div>
-        <button onClick={this.showWidget}> Upload Image </button>
+      <div className="ImageUpload">
+        <Button onClick={this.showWidget}>
+          <i className="far fa-images"></i> Upload Image{" "}
+        </Button>
       </div>
     );
   }
