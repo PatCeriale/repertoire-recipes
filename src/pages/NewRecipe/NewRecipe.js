@@ -1,5 +1,6 @@
 import { Form, Button, Col } from "react-bootstrap";
 import React, { useState } from "react";
+import { cloudinary } from "cloudinary";
 import "./NewRecipe.css";
 
 export default function NewRecipe() {
@@ -40,6 +41,25 @@ export default function NewRecipe() {
     //     alert("user registration failed, try again", error);
     //     // console.log("user registration failed:", error);
     //   });
+  };
+
+  var cl = cloudinary.Cloudinary.new();
+  cl.config("dx93raqjk", "demo");
+
+  const myWidget = cloudinary.createUploadWidget(
+    {
+      cloudName: "dx93raqjk",
+      uploadPreset: "my_preset",
+    },
+    (error, result) => {
+      if (!error && result && result.event === "success") {
+        console.log("Done! Here is the image info: ", result.info);
+      }
+    }
+  );
+
+  const showWidget = (myWidget) => {
+    myWidget.open();
   };
   return (
     <div className="NewRecipe">
@@ -114,6 +134,10 @@ export default function NewRecipe() {
           <Form.Group>
             <Form.File id="exampleFormControlFile1" label="Add recipe image" />
           </Form.Group>
+          <Button
+            variant="primary"
+            // onClick={showWidget}
+          ></Button>
           <Button variant="primary" type="submit" onClick={handleFormSubmit}>
             Submit
           </Button>
