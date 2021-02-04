@@ -1,6 +1,7 @@
 import { Form, Button, Col } from "react-bootstrap";
 import React, { useState } from "react";
-import { cloudinary } from "cloudinary";
+// import { cloudinary } from "cloudinary";
+import ImageUpload from "../../components/ImageUpload/ImageUpload";
 import "./NewRecipe.css";
 
 export default function NewRecipe() {
@@ -43,24 +44,26 @@ export default function NewRecipe() {
     //   });
   };
 
-  var cl = cloudinary.Cloudinary.new();
-  cl.config("dx93raqjk", "demo");
+  // var cl = cloudinary.Cloudinary.new();
+  // cl.config("dx93raqjk", "demo");
+  // let showWidget = () => {
+  //   let myWidget = cloudinary.createUploadWidget(
+  //     {
+  //       cloudName: "dx93raqjk",
+  //       uploadPreset: "elpxwocs",
+  //     },
+  //     (error, result) => {
+  //       if (!error && result && result.event === "success") {
+  //         console.log("Done! Here is the image info: ", result.info.url);
+  //       }
+  //     }
+  //   );
+  //   myWidget.open();
+  // };
 
-  const myWidget = cloudinary.createUploadWidget(
-    {
-      cloudName: "dx93raqjk",
-      uploadPreset: "my_preset",
-    },
-    (error, result) => {
-      if (!error && result && result.event === "success") {
-        console.log("Done! Here is the image info: ", result.info);
-      }
-    }
-  );
-
-  const showWidget = (myWidget) => {
-    myWidget.open();
-  };
+  // const showWidget = (myWidget) => {
+  //   myWidget.open();
+  // };
   return (
     <div className="NewRecipe">
       <div className="card" style={{ width: "90vw" }}>
@@ -134,10 +137,7 @@ export default function NewRecipe() {
           <Form.Group>
             <Form.File id="exampleFormControlFile1" label="Add recipe image" />
           </Form.Group>
-          <Button
-            variant="primary"
-            // onClick={showWidget}
-          ></Button>
+          <ImageUpload />
           <Button variant="primary" type="submit" onClick={handleFormSubmit}>
             Submit
           </Button>
