@@ -80,6 +80,13 @@ export default function NewRecipe() {
           </Form.Group>
           <ImageUpload />
           <br />
+          <img
+            src="https://cdn.arstechnica.net/wp-content/uploads/2019/09/GettyImages-512362812-1-800x534.jpg"
+            // Display default image and then the uploaded image
+            style={{ width: "50vw", justifyContent: "center" }}
+          ></img>
+          <br />
+          <br />
           <Form.Row>
             <Col>
               <Form.Group controlId="preptime" onChange={handleInputChange}>
