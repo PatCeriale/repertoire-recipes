@@ -74,6 +74,10 @@ export default function NewRecipe() {
             <Form.Label>Recipe Title</Form.Label>
             <Form.Control type="title" placeholder="Enter title" />
           </Form.Group>
+          <Form.Group controlId="author" onChange={handleInputChange}>
+            <Form.Label>Author</Form.Label>
+            <Form.Control type="author" placeholder="Insert Name Here" />
+          </Form.Group>
           <Form.Group controlId="description" onChange={handleInputChange}>
             <Form.Label>Description</Form.Label>
             <Form.Control as="textarea" rows={3} />

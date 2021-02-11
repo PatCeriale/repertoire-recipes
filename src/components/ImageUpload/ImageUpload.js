@@ -9,8 +9,11 @@ class ImageUpload extends React.Component {
   showWidget = () => {
     let widget = window.cloudinary.createUploadWidget(
       {
-        cloudName: process.env.REACT_APP_CLOUDINARY_NAME,
-        uploadPreset: process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET,
+        cloudName:
+          process.env.REACT_APP_CLOUDINARY_NAME || process.env.CLOUDINARY_NAME,
+        uploadPreset:
+          process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET ||
+          process.env.CLOUDINARY_UPLOAD_PRESET,
       },
       (error, result) => {
         if (!error && result && result.event === "success") {
