@@ -37,6 +37,7 @@ export default function RecipeList() {
           <button id="leftBtn">
             <i class="fas fa-wrench"></i> Update
           </button>
+          {"               "}
           <button id="rightBtn">
             <i class="far fa-trash-alt"></i> Delete
           </button>
