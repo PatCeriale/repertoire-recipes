@@ -1,0 +1,81 @@
+[
+    {
+        "title": "",
+        "description": "",
+        "author": "",
+        "image": "",
+        "prepTime": "",
+        "cookTime": "",
+        "servingSize": "",
+        "course": "",
+        "ingredients": [
+            {
+                "name":"",
+                "quantity": ""
+            },
+            {
+                "name":"",
+                "quantity": ""
+            }
+        ],
+        "instrucitons": [
+            {
+        "step":"",
+        "description": ""
+            },
+            {
+        "step":"",
+        "description": ""
+            },
+            {
+        "step":"",
+        "description": ""
+            }
+        ]
+    },
+    {
+        "title": "",
+        "description": "",
+        "author": "",
+        "image": "",
+        "prepTime": "",
+        "cookTime": "",
+        "servingSize": "",
+        "course": "",
+        "ingredients": [
+            {
+                "name":"",
+                "quantity": ""
+            }
+        ],
+        "instrucitons": [
+            {
+        "step":"",
+        "description": ""
+            }
+        ]
+    },
+    {
+        "title": "",
+        "description": "",
+        "author": "",
+        "image": "",
+        "prepTime": "",
+        "cookTime": "",
+        "servingSize": "",
+        "course": "",
+        "ingredients": [
+            {
+                "name":"",
+                "quantity": ""
+            }
+        ],
+        "instrucitons": [
+            {
+        "step":"",
+        "description": ""
+            }
+        ]
+    }
+]
+
