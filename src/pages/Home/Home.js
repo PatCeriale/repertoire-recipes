@@ -71,7 +71,7 @@ export default function Home() {
         <ul>
           <li>
             {" "}
-            <Link to="/recipelist"> All Recipes</Link>
+            <Link to="/recipelist">Title</Link>
           </li>
           <li>
             <Link to="/author">Author</Link>
