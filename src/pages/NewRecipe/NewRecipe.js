@@ -64,6 +64,11 @@ export default function NewRecipe() {
   // const showWidget = (myWidget) => {
   //   myWidget.open();
   // };
+
+  const dropdownStyle = {
+    width: "33%",
+  };
+
   return (
     <div className="NewRecipe">
       <div className="card" style={{ width: "90vw" }}>
@@ -105,7 +110,11 @@ export default function NewRecipe() {
               </Form.Group>
             </Col>
           </Form.Row>
-          <Form.Group controlId="servingsize" onChange={handleInputChange}>
+          <Form.Group
+            controlId="servingsize"
+            onChange={handleInputChange}
+            style={dropdownStyle}
+          >
             <Form.Label>Serving Size</Form.Label>
             <Form.Control
               as="select"
@@ -123,6 +132,26 @@ export default function NewRecipe() {
               <option value="8">8</option>
               <option value="9">9</option>
               <option value="10">10</option>
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group
+            controlId="course"
+            onChange={handleInputChange}
+            style={dropdownStyle}
+          >
+            <Form.Label>Course</Form.Label>
+            <Form.Control
+              as="select"
+              //   className="mr-sm-2"
+              //   id="inlineFormCustomSelect"
+              //   custom
+            >
+              <option value="0"> </option>
+              <option value="1">Breakfast</option>
+              <option value="2">Lunch</option>
+              <option value="3">Dinner</option>
+              <option value="4">Dessert</option>
             </Form.Control>
           </Form.Group>
 
