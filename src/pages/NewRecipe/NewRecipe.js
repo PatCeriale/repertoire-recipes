@@ -44,6 +44,20 @@ export default function NewRecipe() {
     //   });
   };
 
+  const handleAddIngredient = (event) => {
+    event.preventDefault();
+    document.getElementById("ingredientListBox").append(
+      <Form.Group controlId="formBasicTitle">
+        <Form.Control type="text" placeholder="Enter ingredient and amount" />
+      </Form.Group>
+    );
+    console.log("ingredient list expanded");
+  };
+  const handleAddStep = (event) => {
+    event.preventDefault();
+    console.log("preparation list expanded");
+  };
+
   // var cl = cloudinary.Cloudinary.new();
   // cl.config("dx93raqjk", "demo");
   // let showWidget = () => {
@@ -67,6 +81,7 @@ export default function NewRecipe() {
 
   const dropdownStyle = {
     width: "33%",
+    display: "inline",
   };
 
   return (
@@ -154,25 +169,30 @@ export default function NewRecipe() {
               <option value="4">Dessert</option>
             </Form.Control>
           </Form.Group>
-
-          <Form.Group controlId="formBasicTitle">
-            <Form.Label>Ingredients</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter ingredient and amount"
-            />
-          </Form.Group>
-          <Button variant="primary" type="submit">
+          <div id="ingredientListBox">
+            <Form.Group controlId="formBasicTitle">
+              <Form.Label>Ingredients</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter ingredient and amount"
+              />
+            </Form.Group>
+          </div>
+          <Button variant="primary" type="submit" onClick={handleAddIngredient}>
             <i className="fas fa-plus-circle"></i> Add Ingredient
           </Button>
-          <Form.Group controlId="formBasicTitle">
-            <Form.Label>Preparation</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter step by step preparation"
-            />
-          </Form.Group>
-          <Button variant="primary" type="submit">
+
+          <div id="stepListBox">
+            <Form.Group controlId="formBasicTitle">
+              <Form.Label>Preparation</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                placeholder="Enter step by step preparation"
+              />
+            </Form.Group>
+          </div>
+          <Button variant="primary" type="submit" onClick={handleAddStep}>
             <i className="fas fa-plus-circle"></i> Add another step
           </Button>
           {/* <Form.Group>
