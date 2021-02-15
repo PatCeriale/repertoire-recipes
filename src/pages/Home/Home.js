@@ -70,14 +70,14 @@ export default function Home() {
         <h5>Search recipes by:</h5>
         <ul>
           <li>
-            <Link to="/style">Style</Link>
-          </li>
-          <li>
-            <Link to="/ingredient">Ingredient</Link>
-          </li>
-          <li>
             {" "}
             <Link to="/recipelist"> All Recipes</Link>
+          </li>
+          <li>
+            <Link to="/author">Author</Link>
+          </li>
+          <li>
+            <Link to="/course">Course</Link>
           </li>
         </ul>
       </div>
