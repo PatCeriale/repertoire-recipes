@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 class ImageUpload extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { image: "" };
   }
   showWidget = () => {
     let widget = window.cloudinary.createUploadWidget(
@@ -17,7 +17,10 @@ class ImageUpload extends React.Component {
       },
       (error, result) => {
         if (!error && result && result.event === "success") {
-          console.log(result.info.url);
+          const cloudinaryLink = result.info.url;
+          console.log(cloudinaryLink);
+          this.props({ image: { cloudinaryLink } });
+
           // Return url to server when it is running correctly, setState?
         }
       }

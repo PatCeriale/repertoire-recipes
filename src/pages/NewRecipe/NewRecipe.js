@@ -8,7 +8,7 @@ export default function NewRecipe() {
   const [mystate, setMyState] = useState({
     title: "",
     description: "",
-    image: "",
+    // image: "",
     preptime: "",
     cooktime: "",
     servingsize: "",
@@ -17,6 +17,11 @@ export default function NewRecipe() {
     course: "",
     tags: "",
   });
+
+  const [myImage, setMyImage] = useState({
+    image: "",
+  });
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 
@@ -26,6 +31,14 @@ export default function NewRecipe() {
       [name]: value,
     });
   };
+
+  // const handleAddImage = (event) => {
+  //   const { name, value } = event.target;
+
+  //   setMyState({
+  //     image: {},
+  //   });
+  // };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -102,15 +115,18 @@ export default function NewRecipe() {
             <Form.Label>Description</Form.Label>
             <Form.Control as="textarea" rows={3} />
           </Form.Group>
+
           <ImageUpload />
           <br />
           <img
             src="https://cdn.arstechnica.net/wp-content/uploads/2019/09/GettyImages-512362812-1-800x534.jpg"
             // Display default image and then the uploaded image
+            alt="Dish"
             style={{ width: "50vw", justifyContent: "center" }}
           ></img>
           <br />
           <br />
+
           <Form.Row>
             <Col>
               <Form.Group controlId="preptime" onChange={handleInputChange}>
