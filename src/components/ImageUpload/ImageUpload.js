@@ -19,7 +19,7 @@ class ImageUpload extends React.Component {
         if (!error && result && result.event === "success") {
           const cloudinaryLink = result.info.url;
           console.log(cloudinaryLink);
-          this.props({ image: { cloudinaryLink } });
+          // this.props({ image: { cloudinaryLink } });
 
           // Return url to server when it is running correctly, setState?
         }
