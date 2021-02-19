@@ -4,8 +4,9 @@ import { Button } from "react-bootstrap";
 class ImageUpload extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { image: "" };
+    // this.state = { image: "" };
   }
+
   showWidget = () => {
     let widget = window.cloudinary.createUploadWidget(
       {
@@ -19,8 +20,9 @@ class ImageUpload extends React.Component {
         if (!error && result && result.event === "success") {
           const cloudinaryLink = result.info.url;
           console.log(cloudinaryLink);
+          // return cloudinaryLink;
           // this.props({ image: { cloudinaryLink } });
-
+          // this.checkUploadResult(result);
           // Return url to server when it is running correctly, setState?
         }
       }

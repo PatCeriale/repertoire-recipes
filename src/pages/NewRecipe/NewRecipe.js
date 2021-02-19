@@ -96,7 +96,10 @@ export default function NewRecipe() {
     width: "33%",
     display: "inline",
   };
-
+  // const { imageUrl, imageAlt } = this.state;
+  const [imageUrl, setImageUrl] = useState({
+    image: "",
+  });
   return (
     <div className="NewRecipe">
       <div className="card" style={{ width: "90vw" }}>
@@ -115,6 +118,8 @@ export default function NewRecipe() {
             <Form.Label>Description</Form.Label>
             <Form.Control as="textarea" rows={3} />
           </Form.Group>
+
+          <img src={imageUrl} alt="Dish" className="displayed-image" />
 
           <ImageUpload />
           <br />
