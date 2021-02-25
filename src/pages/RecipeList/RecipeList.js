@@ -1,9 +1,13 @@
-import { Form, Col, Row } from "react-bootstrap";
+import { Form, Col, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import "./RecipeList.css";
 
 export default function RecipeList() {
+  const getRandomRecipe = (event) => {
+    event.preventDefault();
+    console.log(Math.floor(Math.random() * Math.floor(10)));
+  };
   return (
     <div className="Home">
       <div className="card" style={{ width: "90vw" }}>
@@ -31,6 +35,9 @@ export default function RecipeList() {
             </Col>
           </Row>
         </Form>
+        <Button variant="success" onClick={getRandomRecipe}>
+          Get a Random Recipe
+        </Button>
         {/* Map over alphabet and organize each recipe alphabetically by searchBy term */}
         <h1 id="fancyText" style={{ textAlign: "left" }}>
           A <hr />
