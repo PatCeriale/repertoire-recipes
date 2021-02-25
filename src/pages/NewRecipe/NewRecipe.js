@@ -8,7 +8,7 @@ export default function NewRecipe() {
   const [mystate, setMyState] = useState({
     title: "",
     description: "",
-    // image: "",
+    imageUrl: "",
     preptime: "",
     cooktime: "",
     servingsize: "",
@@ -18,9 +18,9 @@ export default function NewRecipe() {
     tags: "",
   });
 
-  const [myImage, setMyImage] = useState({
-    image: "",
-  });
+  // const [myImage, setMyImage] = useState({
+  //   image: "",
+  // });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -97,9 +97,9 @@ export default function NewRecipe() {
     display: "inline",
   };
   // const { imageUrl, imageAlt } = this.state;
-  const [imageUrl, setImageUrl] = useState({
-    image: "",
-  });
+  // const [imageUrl, setImageUrl] = useState({
+  //   image: "",
+  // });
   return (
     <div className="NewRecipe">
       <div className="card" style={{ width: "90vw" }}>
@@ -119,7 +119,7 @@ export default function NewRecipe() {
             <Form.Control as="textarea" rows={3} />
           </Form.Group>
 
-          <img src={imageUrl} alt="Dish" className="displayed-image" />
+          <img src="#" alt="Dish" className="displayed-image" />
 
           <ImageUpload />
           <br />
