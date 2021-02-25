@@ -5,8 +5,10 @@ import "./RecipeList.css";
 
 export default function RecipeList() {
   const getRandomRecipe = (event) => {
+    const arr = ["a", "b", "c", "d", "e", "f", "g"];
     event.preventDefault();
-    console.log(Math.floor(Math.random() * Math.floor(10)));
+    // change arr to array of recipeId's
+    console.log(Math.floor(Math.random() * Math.floor(arr.length)));
   };
   return (
     <div className="Home">
