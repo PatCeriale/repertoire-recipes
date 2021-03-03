@@ -2,6 +2,7 @@ import { Form, Button, Col } from "react-bootstrap";
 import React, { useState } from "react";
 // import { cloudinary } from "cloudinary";
 import ImageUpload from "../../components/ImageUpload/ImageUpload";
+import IngredientListItem from "../../components/IngredientListItem/IngredientListItem";
 import "./NewRecipe.css";
 
 export default function NewRecipe() {
@@ -59,13 +60,10 @@ export default function NewRecipe() {
 
   const handleAddIngredient = (event) => {
     event.preventDefault();
-    document.getElementById("ingredientListBox").append(
-      <Form.Group controlId="formBasicTitle">
-        <Form.Control type="text" placeholder="Enter ingredient and amount" />
-      </Form.Group>
-    );
+    document.getElementById("ingredientListBox").append(<IngredientListItem />);
     console.log("ingredient list expanded");
   };
+
   const handleAddStep = (event) => {
     event.preventDefault();
     console.log("preparation list expanded");
@@ -119,7 +117,7 @@ export default function NewRecipe() {
             <Form.Control as="textarea" rows={3} />
           </Form.Group>
 
-          <img src="#" alt="Dish" className="displayed-image" />
+          <img src={true} alt="Dish" className="displayed-image" />
 
           <ImageUpload />
           <br />
