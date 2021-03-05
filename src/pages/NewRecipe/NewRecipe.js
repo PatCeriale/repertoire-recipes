@@ -117,7 +117,7 @@ export default function NewRecipe() {
             <Form.Control as="textarea" rows={3} />
           </Form.Group>
 
-          <img src={true} alt="Dish" className="displayed-image" />
+          <img src="#" alt="Dish" className="displayed-image" />
 
           <ImageUpload />
           <br />
