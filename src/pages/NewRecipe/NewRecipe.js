@@ -182,6 +182,7 @@ export default function NewRecipe() {
               <option value="2">Lunch</option>
               <option value="3">Dinner</option>
               <option value="4">Dessert</option>
+              <option value="5">Appetizer</option>
             </Form.Control>
           </Form.Group>
           <div id="ingredientListBox">
