@@ -4,6 +4,13 @@ import React, { useState } from "react";
 import ImageUpload from "../../components/ImageUpload/ImageUpload";
 import IngredientListItem from "../../components/IngredientListItem/IngredientListItem";
 import "./NewRecipe.css";
+import {
+  getAllRecipes,
+  getOneRecipe,
+  createRecipe,
+  updateRecipe,
+  deleteRecipe,
+} from "../../utils/API";
 
 export default function NewRecipe() {
   const [mystate, setMyState] = useState({
@@ -13,15 +20,13 @@ export default function NewRecipe() {
     preptime: "",
     cooktime: "",
     servingsize: "",
-    ingredients: [{ type: "" }],
-    instructions: [{ type: "" }],
+    ingredients: "",
+    instructions: "",
+    // ingredients: [{ type: "" }],
+    // instructions: [{ type: "" }],
     course: "",
-    tags: "",
+    // tags: "",
   });
-
-  // const [myImage, setMyImage] = useState({
-  //   image: "",
-  // });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -33,29 +38,20 @@ export default function NewRecipe() {
     });
   };
 
-  // const handleAddImage = (event) => {
-  //   const { name, value } = event.target;
-
-  //   setMyState({
-  //     image: {},
-  //   });
-  // };
-
   const handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(mystate);
-
-    // createNewUser(mystate)
-    //   .then((res) => {
-    //     console.log(res);
-    //     localStorage.setItem("token", res.data.token);
-    //     history.push("/signin");
-    //   })
-    //   // add an alert to let user know their signup didn't work
-    //   .catch((error) => {
-    //     alert("user registration failed, try again", error);
-    //     // console.log("user registration failed:", error);
-    //   });
+    createRecipe({
+      title,
+      description,
+      imageUrl,
+      preptime,
+      cooktime,
+      servingsize,
+      ingredients,
+      instructions,
+      course,
+    });
   };
 
   const handleAddIngredient = (event) => {
