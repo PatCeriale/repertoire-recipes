@@ -15,6 +15,7 @@ import {
 export default function NewRecipe() {
   const [mystate, setMyState] = useState({
     title: "",
+    author: "",
     description: "",
     imageUrl: "",
     preptime: "",
@@ -33,24 +34,27 @@ export default function NewRecipe() {
 
     setMyState({
       ...mystate,
-
       [name]: value,
+      // title: value,
+      // author: value,
+      // description: value,
     });
+    // console.log(mystate);
   };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(mystate);
     createRecipe({
-      title,
-      description,
-      imageUrl,
-      preptime,
-      cooktime,
-      servingsize,
-      ingredients,
-      instructions,
-      course,
+      title: mystate.title,
+      description: mystate.description,
+      imageUrl: mystate,
+      preptime: mystate,
+      cooktime: mystate,
+      servingsize: mystate,
+      ingredients: mystate,
+      instructions: mystate,
+      course: mystate,
     });
   };
 
