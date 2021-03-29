@@ -193,14 +193,15 @@ export default function NewRecipe() {
             <Form.Group controlId="formBasicTitle">
               <Form.Label>Ingredients</Form.Label>
               <Form.Control
-                type="text"
-                placeholder="Enter ingredient and amount"
+                as="textarea"
+                rows={3}
+                placeholder="Enter ingredients and amounts"
               />
             </Form.Group>
           </div>
-          <Button variant="primary" type="submit" onClick={handleAddIngredient}>
+          {/* <Button variant="primary" type="submit" onClick={handleAddIngredient}>
             <i className="fas fa-plus-circle"></i> Add Ingredient
-          </Button>
+          </Button> */}
 
           <div id="stepListBox">
             <Form.Group controlId="formBasicTitle">
@@ -212,9 +213,9 @@ export default function NewRecipe() {
               />
             </Form.Group>
           </div>
-          <Button variant="primary" type="submit" onClick={handleAddStep}>
+          {/* <Button variant="primary" type="submit" onClick={handleAddStep}>
             <i className="fas fa-plus-circle"></i> Add another step
-          </Button>
+          </Button> */}
           {/* <Form.Group>
             <Form.File id="exampleFormControlFile1" label="Add recipe image" />
           </Form.Group> */}
