@@ -12,6 +12,8 @@ import {
   deleteRecipe,
 } from "../../utils/API";
 
+getAllRecipes();
+
 export default function NewRecipe() {
   const [mystate, setMyState] = useState({
     title: "",
@@ -100,6 +102,7 @@ export default function NewRecipe() {
   // });
   return (
     <div className="NewRecipe">
+    <button onClick={getAllRecipes()}>Log recipes</button>
       <div className="card" style={{ width: "90vw" }}>
         <h1 id="fancyText">Add a recipe</h1>
         <hr />

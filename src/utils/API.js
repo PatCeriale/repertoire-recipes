@@ -3,7 +3,7 @@ import axios from "axios";
 const baseURL =
   // "https://repertoire-sql-backend.herokuapp.com/" ||
   // process.env.REACT_APP_API_URL ||
-  "http://localhost:5000";
+  "http://localhost:8000";
 
 export const getAllRecipes = function (userData) {
   return axios.get(`${baseURL}api/recipes`, userData);
