@@ -114,7 +114,7 @@ export default function NewRecipe() {
       'Cook time: ' + recipeCookTime,
       'Serving size: ' + recipeServingSize
     );
-    console.log(recipeState);
+    // console.log(recipeState);
   };
 
   const dropdownStyle = {
@@ -137,11 +137,11 @@ export default function NewRecipe() {
             src='http://res.cloudinary.com/dx93raqjk/image/upload/v1636054727/repertoire-recipes/nmsxp77lk80o0q3vt7zx.png'
             alt='Dish'
             className='displayed-image'
+            display='none'
           />
         ) : (
-          <img src='recipeImageUrl' alt='Dish' className='displayed-image' />
+          <img src={recipeImageUrl} alt='Dish' className='displayed-image' />
         )}
-        image url = {setRecipeImageUrl}
         <ImageUpload handleSetImageUrl={setRecipeImageUrl} />
         <br />
         <Form onSubmit={handleFormSubmit}>
@@ -231,15 +231,17 @@ export default function NewRecipe() {
               <option value='5'>Appetizer</option>
             </Form.Control>
           </Form.Group>
+          <br />
           <div id='ingredientListBox'>
-            <Form.Group controlId='formBasicTitle'>
+            <IngredientListItem />
+            {/* <Form.Group controlId='formBasicTitle'>
               <Form.Label>Ingredients</Form.Label>
               <Form.Control
                 as='textarea'
                 rows={3}
                 placeholder='Enter ingredients and amounts'
               />
-            </Form.Group>
+            </Form.Group> */}
           </div>
           {/* <Button variant="primary" type="submit" onClick={handleAddIngredient}>
             <i className="fas fa-plus-circle"></i> Add Ingredient
