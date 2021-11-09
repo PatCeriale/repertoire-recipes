@@ -2,7 +2,7 @@ import { Form, Button, Col } from 'react-bootstrap';
 import React, { useState } from 'react';
 // import { cloudinary } from "cloudinary";
 import ImageUpload from '../../components/ImageUpload/ImageUpload';
-import IngredientListItem from '../../components/IngredientListItem/IngredientListItem';
+import IngredientList from '../../components/IngredientList/IngredientList';
 import './NewRecipe.css';
 import {
   getAllRecipes,
@@ -74,7 +74,7 @@ export default function NewRecipe() {
 
   const handleAddIngredient = (event) => {
     event.preventDefault();
-    document.getElementById('ingredientListBox').append(<IngredientListItem />);
+    document.getElementById('ingredientListBox').append(<IngredientList />);
     console.log('ingredient list expanded');
   };
 
@@ -233,7 +233,7 @@ export default function NewRecipe() {
           </Form.Group>
           <br />
           <div id='ingredientListBox'>
-            <IngredientListItem />
+            <IngredientList />
             {/* <Form.Group controlId='formBasicTitle'>
               <Form.Label>Ingredients</Form.Label>
               <Form.Control
